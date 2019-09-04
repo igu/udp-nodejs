@@ -1,0 +1,10 @@
+{
+  "name": "udp_distribuido",
+  "version": "1.0.0",
+  "main": "src/udp_server.js",
+  "license": "MIT",
+  "dependencies": {
+    "dgram": "^1.0.1",
+    "express": "^4.17.1"
+  }
+}
