@@ -1,5 +1,5 @@
 const PORT = 33333;
-const HOST = 'localhost';
+const HOST = '10.25.2.124';
 
 const dgram = require('dgram');
 const client = dgram.createSocket('udp4');
