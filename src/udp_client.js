@@ -1,5 +1,5 @@
-const PORT = 33333;
-const HOST = '10.25.2.124';
+const PORT = 3000;
+const HOST = 'localhost';
 
 const dgram = require('dgram');
 const client = dgram.createSocket('udp4');
@@ -12,6 +12,8 @@ client.send(msg, 0, msg.length, PORT, HOST, function(err, bytes) {
 });
 
 client.on('message', function(message, remote) {
-    console.log(`Mensagem recebida de ${remote.address}:${remote.port} - Msg: ${message} / Msg length: ${message.length}`);
+    console.log(`Mensagem recebida de ${remote.address}:${remote.port}`);
+    console.log(`Msg: ${message}`);
+    console.log(`Bytes recebidos: ${message.length}`);
     client.close();
 });
