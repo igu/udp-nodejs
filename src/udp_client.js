@@ -14,6 +14,6 @@ client.send(msg, 0, msg.length, PORT, HOST, function(err, bytes) {
 client.on('message', function(message, remote) {
     console.log(`Mensagem recebida de ${remote.address}:${remote.port}`);
     console.log(`Msg: ${message}`);
-    console.log(`Bytes recebidos: ${message.length}`);
+    console.log(`Bytes recebidos: ${message.length}bytes`);
     client.close();
 });
