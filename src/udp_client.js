@@ -1,5 +1,5 @@
 const PORT = 3333;
-const HOST = 'https://udp-nodejs.herokuapp.com/';
+const HOST = 'udp-nodejs.herokuapp.com';
 
 const dgram = require('dgram');
 const client = dgram.createSocket('udp4');
