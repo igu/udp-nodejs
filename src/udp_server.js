@@ -1,4 +1,5 @@
 const PORT =  process.env.PORT || 3000;
+const HOST =  process.env.HOST || 'localhost';
 
 const dgram = require('dgram');
 const server = dgram.createSocket('udp4');
@@ -20,4 +21,4 @@ server.on('message', function(message, remote) {
     });
 });
 
-server.bind(PORT);
+server.bind(PORT, HOST);
