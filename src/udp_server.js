@@ -1,5 +1,5 @@
 const PORT = 3000;
-const HOST = '40.114.65.11';
+const HOST = '0.0.0.0';
 
 const fs = require('fs');
 const dgram = require('dgram');
@@ -18,21 +18,17 @@ server.on('message', function(message, remote) {
     const name = `${__dirname}/../img/novo.txt`;
     //const name = `${__dirname}/../img/flag.txt`;
 
-    let dateInicial = Date.now();
+    
     let PORT_CLIENT = remote.port;
     let HOST_CLIENT  = remote.address;
 
     let data = Buffer.from(fs.readFileSync(name, 'utf8'));
-    console.log(`${data.byteLength}bytes`);
+    console.log(`${data.byteLength} bytes`);
     
     server.send(data.toString(), 0, data.byteLength, PORT_CLIENT, HOST_CLIENT, function(err, bytes) {
       if (err) throw err;
         console.log(`Mensagem enviada para ${HOST_CLIENT}:${PORT_CLIENT}`);
         console.log(`Bytes enviados: ${data.length}`);
-        console.log(`Milisegundos Inicial ${dateInicial}`);
-        let dateFinal = Date.now();
-        console.log(`Milisegundos Final ${dateFinal}`);
-        console.log(`Tempo final: ${dateFinal - dateInicial}ms`);
     }); 
 
 });
