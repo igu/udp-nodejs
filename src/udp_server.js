@@ -14,9 +14,9 @@ server.on('message', function(message, remote) {
     console.log(`Nova conexão: ${remote.address}:${remote.port} - Msg: ${message}`);
 
     
-    const name = `${__dirname}/../img/newflag.txt`;
+    //const name = `${__dirname}/../img/newflag.txt`;
     //const name = `${__dirname}/../img/novo.txt`;
-    //const name = `${__dirname}/../img/flag.txt`;
+    const name = `${__dirname}/../img/flag.txt`;
 
     
     let PORT_CLIENT = remote.port;
