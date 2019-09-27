@@ -15,8 +15,8 @@ server.on('message', function(message, remote) {
 
     
     //const name = `${__dirname}/../img/newflag.txt`;
-    //const name = `${__dirname}/../img/novo.txt`;
-    const name = `${__dirname}/../img/flag.txt`;
+    const name = `${__dirname}/../img/novo.txt`;
+    //const name = `${__dirname}/../img/flag.txt`;
 
     
     let PORT_CLIENT = remote.port;
